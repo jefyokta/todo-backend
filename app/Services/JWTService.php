@@ -13,7 +13,7 @@ class JWTService
     private static $alg = 'HS256';
     private static function getKey()
     {
-        return env("JWT_KEY");
+        return env("JWT_KEY",'secrnsindiasifnisgnineifnsifninsdfisgnsiet-key-for-tessting-sasfinti4sni');
     }
 
     static function sign($payload = [])
