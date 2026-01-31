@@ -19,7 +19,8 @@ jobs:
       - run: cp .env.example .env || true
 
       - run: php artisan key:generate
-
+      - run: |
+              echo "JWT_SECRET=ci_super_secret_key_12345678901234567890" >> .env
       - run: touch database/database.sqlite
 
       - run: php artisan migrate
